@@ -2,16 +2,25 @@
 <?= $this->section('content') ?>
 <?php
 $username = [
-    'name' => 'username',
-    'id' => 'username',
-    'class' => 'form-control'
+  'name' => 'username',
+  'id' => 'username',
+  'class' => 'form-control',
+  
+  'required' => true,
+  'minlength' => 6
+  
 ];
 
 $password = [
-    'name' => 'password',
-    'id' => 'password',
-    'class' => 'form-control'
+  'name' => 'password',
+  'id' => 'password',
+  'class' => 'form-control',
+  
+  'required' => true,
+  'minlength' => 7
+  
 ];
+
 ?>
 <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
         <div class="container">
@@ -47,7 +56,7 @@ $password = [
                 }
                 ?>
 
-                <?= form_open('login', 'class = "row g-3 needs-validation"') ?>
+                <?= form_open('login', ['class' => 'row g-3', 'novalidate' => true]) ?>
                 
                 <div class="col-12">
                     <label for="yourUsername" class="form-label">Username</label>
