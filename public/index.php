@@ -1,13 +1,8 @@
-<?php
+<?php 
+
 
 use CodeIgniter\Boot;
 use Config\Paths;
-
-/*
- *---------------------------------------------------------------
- * CHECK PHP VERSION
- *---------------------------------------------------------------
- */
 
 $minPhpVersion = '8.2'; // If you update this, don't forget to update `spark`.
 if (version_compare(PHP_VERSION, $minPhpVersion, '<')) {
